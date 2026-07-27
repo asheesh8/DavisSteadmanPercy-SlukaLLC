@@ -30,16 +30,16 @@ export default function StaffPage() {
         </p>
       </AnimatedSection>
 
-      <div className="mt-12 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
+      <div className="mt-12 flex flex-wrap gap-6">
         {people.map((person, i) => (
-          <AnimatedItem key={person.id} index={i}>
-            <div className="group overflow-hidden rounded-[1.75rem] bg-paper ring-1 ring-ink/8 transition-all hover:-translate-y-1.5 hover:shadow-[0_20px_40px_-15px_rgba(11,27,43,0.2)]">
+          <AnimatedItem key={person.id} index={i} className="w-[calc(50%-0.75rem)] sm:w-56">
+            <div className="group h-full overflow-hidden rounded-[1.75rem] bg-paper ring-1 ring-ink/8 transition-all hover:-translate-y-1.5 hover:shadow-[0_20px_40px_-15px_rgba(11,27,43,0.2)]">
               <div className="relative aspect-[4/5] w-full overflow-hidden bg-ink/5">
                 <Image
                   src={person.photo}
                   alt={person.name}
                   fill
-                  sizes="(max-width: 768px) 50vw, 25vw"
+                  sizes="(max-width: 640px) 50vw, 224px"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
@@ -54,23 +54,23 @@ export default function StaffPage() {
       </div>
 
       {pets.length > 0 && (
-        <div className="mt-20">
+        <div className="mt-16">
           <AnimatedSection className="flex items-center gap-2">
             <PawPrint size={20} className="text-brass" />
             <h2 className="font-display text-2xl font-medium text-ink">
               Office Companions
             </h2>
           </AnimatedSection>
-          <div className="mt-8 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
+          <div className="mt-8 flex flex-wrap gap-6">
             {pets.map((pet, i) => (
-              <AnimatedItem key={pet.id} index={i}>
-                <div className="group overflow-hidden rounded-[1.75rem] bg-paper ring-1 ring-ink/8 transition-all hover:-translate-y-1.5 hover:shadow-[0_20px_40px_-15px_rgba(11,27,43,0.2)]">
+              <AnimatedItem key={pet.id} index={i} className="w-[calc(50%-0.75rem)] sm:w-56">
+                <div className="group h-full overflow-hidden rounded-[1.75rem] bg-paper ring-1 ring-ink/8 transition-all hover:-translate-y-1.5 hover:shadow-[0_20px_40px_-15px_rgba(11,27,43,0.2)]">
                   <div className="relative aspect-[4/5] w-full overflow-hidden bg-ink/5">
                     <Image
                       src={pet.photo}
                       alt={pet.name}
                       fill
-                      sizes="(max-width: 768px) 50vw, 25vw"
+                      sizes="(max-width: 640px) 50vw, 224px"
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
