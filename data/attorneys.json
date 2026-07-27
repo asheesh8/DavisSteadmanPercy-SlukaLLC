@@ -1,0 +1,101 @@
+[
+  {
+    "id": "todd-steadman",
+    "slug": "todd-steadman",
+    "name": "Todd Steadman",
+    "title": "Attorney",
+    "photo": "/images/attorney-todd-steadman.jpg",
+    "order": 1,
+    "practiceAreas": [
+      "Family Law",
+      "Municipal Law",
+      "Estate Planning & Probate",
+      "Landlord/Tenant",
+      "Civil Litigation"
+    ],
+    "education": [
+      "Norwich University (1986, high honors)",
+      "Vermont Law School (graduated with honors, 1996)"
+    ],
+    "barAdmissions": [
+      "Vermont Bar, 1996"
+    ],
+    "bio": "Todd concentrates on all aspects of family law including divorce, parentage, domestic partnerships, establishment or modification of parental rights and responsibilities, parent-child contact, and child support. He also handles civil litigation, municipal law, estate planning, probate, and landlord/tenant matters.\n\nWith over two decades of family law experience, Todd served as a Marine Corps helicopter pilot during Desert Shield/Desert Storm before law school, then continued his military service with the Vermont Army National Guard, retiring as Lieutenant Colonel after 21 years.\n\nTodd has served as President of the Windsor County Bar Association for over a decade, is a three-term Hartford Selectboard member, an American Legion and VFW leader, a youth hockey coach for over 10 years, and coordinator of self-represented litigant clinics for the Windsor County family court. In 2005, he was honored by the Vermont Supreme Court for his dedication to the Family Court system.",
+    "phone": "802-295-5631"
+  },
+  {
+    "id": "benjamin-percy",
+    "slug": "benjamin-percy",
+    "name": "Benjamin Percy",
+    "title": "Attorney",
+    "photo": "/images/attorney-benjamin-percy.jpg",
+    "order": 2,
+    "practiceAreas": [
+      "Residential Real Estate",
+      "Commercial Real Estate",
+      "Property Subdivisions",
+      "Title Examinations",
+      "Business Formation"
+    ],
+    "education": [
+      "University of Vermont (Political Science & History)",
+      "Suffolk Law School, J.D."
+    ],
+    "barAdmissions": [
+      "Vermont Bar"
+    ],
+    "bio": "Ben is an Upper Valley native who returned to the region after law school to build his legal practice and raise his family. He represents buyers and sellers of real estate in Vermont, from purchase and sales agreements through closing, and handles commercial real estate transactions, property subdivisions, title examinations, easements and boundary line agreements, and business organization and formation.\n\nHe emphasizes guiding clients through every step of a transaction while protecting their interests. Outside of work, Ben stays busy with skiing, boating, hockey, golf, hiking, and coaching or assisting with youth sports.",
+    "phone": "802-295-5631"
+  },
+  {
+    "id": "boolie-sluka",
+    "slug": "boolie-sluka",
+    "name": "Boolie Sluka",
+    "title": "Attorney",
+    "photo": "/images/attorney-boolie-sluka.jpg",
+    "order": 3,
+    "practiceAreas": [
+      "Family Law",
+      "Mediation & Parent Coordination",
+      "Interstate & International Child Support",
+      "Land Use & Act 250"
+    ],
+    "education": [
+      "University of Tennessee, B.S.",
+      "Vermont Law School, J.D.",
+      "Vermont Law School, Master of Studies in Environmental Law"
+    ],
+    "barAdmissions": [
+      "State of Vermont",
+      "State of New Hampshire",
+      "U.S. District Court for the District of Vermont"
+    ],
+    "bio": "Boolie concentrates on family law matters, including mediation, parent coordination, divorce, parentage, establishment of parental rights and responsibilities, parent-child contact, and child support. She holds specialized expertise in interstate and international child support disputes, and maintains background knowledge in land use and Act 250 environmental applications.\n\nShe is a member of the Vermont Bar Association, the New Hampshire Bar Association, the Association for Conflict Resolution, and the Vermont Association of Family Mediators, and is a former member of the Eastern and Western Regional Child Support Enforcement Associations.",
+    "phone": "802-295-5631"
+  },
+  {
+    "id": "justin-sluka",
+    "slug": "justin-sluka",
+    "name": "Justin Sluka",
+    "title": "Attorney",
+    "photo": "/images/attorney-justin-sluka.jpg",
+    "order": 4,
+    "practiceAreas": [
+      "Workers' Compensation",
+      "Insurance Defense & Coverage",
+      "Civil Litigation",
+      "Municipal Law"
+    ],
+    "education": [
+      "Lehigh University",
+      "Vermont Law School"
+    ],
+    "barAdmissions": [
+      "Vermont",
+      "New Hampshire"
+    ],
+    "bio": "Justin specializes in workers' compensation law, representing both injured workers and Vermont employers throughout the compensation process. He began practicing in 2005 and serves as an approved workers' compensation mediator, having litigated cases at the Department of Labor and Vermont Supreme Court levels. His practice also includes insurance defense, insurance coverage, general civil litigation in Vermont and New Hampshire, and municipal law matters including employment disputes, HR issues, and construction/permitting.\n\nJustin was named a Super Lawyers New England Rising Star in Workers' Compensation (2015) and is a regular speaker at continuing education seminars for attorneys, insurance professionals, and business leaders. He chaired the Reading Elementary School Board of Trustees (2010-2018) and served on the Windsor Central Supervisory Union Board (2007-2018).",
+    "phone": "802-295-5631",
+    "badge": "/images/badge-super-lawyer-justin.png"
+  }
+]

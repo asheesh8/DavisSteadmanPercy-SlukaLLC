@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+:root {
+  --color-ink: #0b1b2b;
+  --color-ink-light: #14273c;
+  --color-cream: #faf6ee;
+  --color-cream-dim: #f1ead9;
+  --color-paper: #fffdf8;
+  --color-brass: #b8863e;
+  --color-brass-light: #d7ac6c;
+  --color-emerald: #1f5c4f;
+  --color-emerald-light: #2f7d6c;
+  --color-line: rgba(11, 27, 43, 0.1);
+}
+
+@theme inline {
+  --color-ink: var(--color-ink);
+  --color-ink-light: var(--color-ink-light);
+  --color-cream: var(--color-cream);
+  --color-cream-dim: var(--color-cream-dim);
+  --color-paper: var(--color-paper);
+  --color-brass: var(--color-brass);
+  --color-brass-light: var(--color-brass-light);
+  --color-emerald: var(--color-emerald);
+  --color-emerald-light: var(--color-emerald-light);
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-manrope);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-fraunces), Georgia, serif;
+}
+
+/* Soft radial accent blobs used behind hero / section backgrounds */
+.bg-blob-brass {
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(184, 134, 62, 0.35),
+    transparent 60%
+  );
+}
+
+.bg-blob-emerald {
+  background: radial-gradient(
+    circle at 70% 60%,
+    rgba(31, 92, 79, 0.28),
+    transparent 60%
+  );
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Subtle grain/texture overlay for the hero, kept very light */
+.bg-grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.035;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+::selection {
+  background: var(--color-brass-light);
+  color: var(--color-ink);
+}
+
+/* Scrollbar (webkit) — subtle, on-brand */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-brass);
+  border-radius: 999px;
+  border: 2px solid var(--color-cream);
+}

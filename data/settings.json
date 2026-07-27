@@ -1,0 +1,34 @@
+{
+  "firmName": "Davis Steadman Percy & Sluka, LLC",
+  "tagline": "Exceptional Skills. Exceptional People. Exceptional Solutions.",
+  "introText": "Davis Steadman Percy & Sluka, LLC offers personal attention in all phases of legal counseling in Vermont and New Hampshire.",
+  "servicesText": "Negotiation, mediation, collaborative law, litigation, trials and appeals in the areas of family law, municipal zoning and tax appeals, landlord/tenant, probate, workers' compensation, personal injury, and general civil disputes.",
+  "realEstateText": "We offer complete services for buyers and sellers of real estate in Vermont, from assistance with purchase and sales agreements to closings.",
+  "phone": "802-295-5631",
+  "woodstockPhone": "802-457-1000",
+  "email": "",
+  "offices": [
+    {
+      "id": "white-river-junction",
+      "name": "White River Junction",
+      "address": "167 N. Main Street, PO Box 796",
+      "cityStateZip": "White River Junction, VT 05001",
+      "phone": "802-295-5631",
+      "photo": "/images/office-white-river.jpg"
+    },
+    {
+      "id": "woodstock",
+      "name": "Woodstock",
+      "address": "24 Elm Street",
+      "cityStateZip": "Woodstock, VT 05091",
+      "phone": "802-457-1000",
+      "photo": "/images/office-woodstock.jpg"
+    }
+  ],
+  "badges": [
+    { "id": "best-lawyers", "image": "/images/badge-best-lawyers.png", "alt": "Best Lawyers" },
+    { "id": "ssi-vetted", "image": "/images/badge-ssi-vetted.gif", "alt": "SSI Vetted Agent Seal" }
+  ],
+  "heroImage": "/images/hero-team.jpg",
+  "logo": "/images/logo.png"
+}

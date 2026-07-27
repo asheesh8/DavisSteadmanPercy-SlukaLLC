@@ -1,0 +1,28 @@
+[
+  {
+    "id": "denise-fadden",
+    "name": "Denise Fadden",
+    "title": "Real Estate Assistant",
+    "photo": "/images/staff-denise-fadden.jpg",
+    "bio": "Denise began working with Davis Steadman Percy & Sluka in 2007. She works in both the White River Junction and Woodstock offices, primarily assisting with real estate transactions, and additionally supports both locations administratively.",
+    "order": 1
+  },
+  {
+    "id": "sally",
+    "name": "Sally",
+    "title": "Office Dog (2004–2018)",
+    "photo": "/images/staff-dog-sally.jpg",
+    "bio": "We deeply miss Sally (2004 to 2018), who graced our office with her cheerful presence and tail-wagging for many years.",
+    "order": 2,
+    "isPet": true
+  },
+  {
+    "id": "lyla",
+    "name": "Lyla",
+    "title": "Office Dog — Miniature Australian Shepherd",
+    "photo": "/images/staff-dog-lyla.jpg",
+    "bio": "A native of Oregon, Lyla moved to Vermont in 2013 as an 8-week-old puppy. She's often found relaxing in Todd's office and is known for her calm demeanor.",
+    "order": 3,
+    "isPet": true
+  }
+]
