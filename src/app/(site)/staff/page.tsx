@@ -30,61 +30,63 @@ export default function StaffPage() {
         </p>
       </AnimatedSection>
 
-      <div className="mt-12 flex flex-wrap gap-6">
-        {people.map((person, i) => (
-          <AnimatedItem key={person.id} index={i} className="w-[calc(50%-0.75rem)] sm:w-56">
-            <div className="group h-full overflow-hidden rounded-[1.75rem] bg-paper ring-1 ring-ink/8 transition-all hover:-translate-y-1.5 hover:shadow-[0_20px_40px_-15px_rgba(11,27,43,0.2)]">
-              <div className="relative aspect-[4/5] w-full overflow-hidden bg-ink/5">
-                <Image
-                  src={person.photo}
-                  alt={person.name}
-                  fill
-                  sizes="(max-width: 640px) 50vw, 224px"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div className="p-5">
-                <h3 className="font-display text-lg font-medium text-ink">{person.name}</h3>
-                <p className="text-sm text-brass">{person.title}</p>
-                <p className="mt-2 text-xs leading-relaxed text-ink/55">{person.bio}</p>
-              </div>
-            </div>
-          </AnimatedItem>
-        ))}
-      </div>
-
-      {pets.length > 0 && (
-        <div className="mt-16">
-          <AnimatedSection className="flex items-center gap-2">
-            <PawPrint size={20} className="text-brass" />
-            <h2 className="font-display text-2xl font-medium text-ink">
-              Office Companions
-            </h2>
-          </AnimatedSection>
-          <div className="mt-8 flex flex-wrap gap-6">
-            {pets.map((pet, i) => (
-              <AnimatedItem key={pet.id} index={i} className="w-[calc(50%-0.75rem)] sm:w-56">
-                <div className="group h-full overflow-hidden rounded-[1.75rem] bg-paper ring-1 ring-ink/8 transition-all hover:-translate-y-1.5 hover:shadow-[0_20px_40px_-15px_rgba(11,27,43,0.2)]">
-                  <div className="relative aspect-[4/5] w-full overflow-hidden bg-ink/5">
-                    <Image
-                      src={pet.photo}
-                      alt={pet.name}
-                      fill
-                      sizes="(max-width: 640px) 50vw, 224px"
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="font-display text-lg font-medium text-ink">{pet.name}</h3>
-                    <p className="text-xs text-brass">{pet.title}</p>
-                    <p className="mt-2 text-xs leading-relaxed text-ink/55">{pet.bio}</p>
-                  </div>
+      <div className="mt-12 grid gap-10 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-start lg:gap-12">
+        <div className="flex flex-wrap gap-6">
+          {people.map((person, i) => (
+            <AnimatedItem key={person.id} index={i} className="w-[calc(50%-0.75rem)] sm:w-56">
+              <div className="group h-full overflow-hidden rounded-[1.75rem] bg-paper ring-1 ring-ink/8 transition-all hover:-translate-y-1.5 hover:shadow-[0_20px_40px_-15px_rgba(11,27,43,0.2)]">
+                <div className="relative aspect-[4/5] w-full overflow-hidden bg-ink/5">
+                  <Image
+                    src={person.photo}
+                    alt={person.name}
+                    fill
+                    sizes="(max-width: 640px) 50vw, 224px"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
                 </div>
-              </AnimatedItem>
-            ))}
-          </div>
+                <div className="p-5">
+                  <h3 className="font-display text-lg font-medium text-ink">{person.name}</h3>
+                  <p className="text-sm text-brass">{person.title}</p>
+                  <p className="mt-2 text-xs leading-relaxed text-ink/55">{person.bio}</p>
+                </div>
+              </div>
+            </AnimatedItem>
+          ))}
         </div>
-      )}
+
+        {pets.length > 0 && (
+          <div className="lg:border-l lg:border-ink/10 lg:pl-12">
+            <AnimatedSection className="flex items-center gap-2">
+              <PawPrint size={20} className="text-brass" />
+              <h2 className="font-display text-2xl font-medium text-ink">
+                Office Companions
+              </h2>
+            </AnimatedSection>
+            <div className="mt-6 flex flex-wrap gap-6">
+              {pets.map((pet, i) => (
+                <AnimatedItem key={pet.id} index={i} className="w-[calc(50%-0.75rem)] sm:w-56">
+                  <div className="group h-full overflow-hidden rounded-[1.75rem] bg-paper ring-1 ring-ink/8 transition-all hover:-translate-y-1.5 hover:shadow-[0_20px_40px_-15px_rgba(11,27,43,0.2)]">
+                    <div className="relative aspect-[4/5] w-full overflow-hidden bg-ink/5">
+                      <Image
+                        src={pet.photo}
+                        alt={pet.name}
+                        fill
+                        sizes="(max-width: 640px) 50vw, 224px"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                    <div className="p-5">
+                      <h3 className="font-display text-lg font-medium text-ink">{pet.name}</h3>
+                      <p className="text-xs text-brass">{pet.title}</p>
+                      <p className="mt-2 text-xs leading-relaxed text-ink/55">{pet.bio}</p>
+                    </div>
+                  </div>
+                </AnimatedItem>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
