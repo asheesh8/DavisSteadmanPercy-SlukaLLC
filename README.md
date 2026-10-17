@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Davis, Steadman, Percy & Sluka — Website
 
-## Getting Started
+Website for **Davis, Steadman, Percy & Sluka**, a law firm serving Vermont and New Hampshire's Upper Valley: attorney and staff profiles, news, office details, a contact form, and an AI receptionist chatbot. A password-protected `/admin` dashboard lets the firm edit attorneys, staff, news, site settings, and read contact submissions.
 
-First, run the development server:
+**Live:** https://davis-steadman-percy-sluka-llc.vercel.app
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Tech stack
+
+- Next.js 16 (App Router) + React 19 + TypeScript, Tailwind CSS 4
+- Content stored as JSON files in `data/` (read and written by `src/lib/db.ts`)
+- Admin auth: one shared password, HMAC-signed session cookie (`src/lib/auth.ts`), enforced in `src/proxy.ts`
+- Chatbot: Anthropic Claude when `ANTHROPIC_API_KEY` is set, canned answers otherwise (`src/app/api/chat`, `src/lib/chatbot.ts`)
+
+## Project layout
+
+```
+src/app/(site)/      Public pages: home, attorneys, staff, contact, privacy policy
+src/app/admin/       Login page and dashboard
+src/app/api/         JSON CRUD for attorneys, staff, news, settings, contact; auth; chat
+src/proxy.ts         Guards /admin/dashboard and every mutating admin API call
+src/lib/             JSON data access, auth, chatbot prompt, shared types
+data/                The site's content (attorneys, staff, news, settings, submissions)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Local setup
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Requires Node 20+.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm install
+cp .env.example .env.local   # then set the values below
+npm run dev                  # http://localhost:3000 — admin at /admin
+npm run lint
+```
 
-## Learn More
+## Environment variables
 
-To learn more about Next.js, take a look at the following resources:
+Names only — set values in `.env.local` or the Vercel project. Never commit them.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Variable | Purpose |
+|---|---|
+| `ADMIN_PASSWORD` | Password for `/admin`. Use a long, unique value. |
+| `ADMIN_SESSION_SECRET` | Long random string that signs the admin session cookie (`openssl rand -hex 32`) |
+| `ANTHROPIC_API_KEY` | Optional — turns on the AI chatbot |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deploying
 
-## Deploy on Vercel
+Hosted on Vercel; pushes to `main` deploy to production. Set the variables above first — without `ADMIN_SESSION_SECRET` the app falls back to a development-only signing key.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Known limitation:** on Vercel the deployed filesystem is read-only, so changes made in `/admin` and new contact-form submissions cannot be written to `data/`. The admin is effective only when running on a server with a writable disk, until storage moves to a database.
