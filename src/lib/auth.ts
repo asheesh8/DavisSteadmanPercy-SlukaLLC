@@ -15,6 +15,9 @@ function sign(value: string): string {
   return crypto.createHmac("sha256", getSecret()).update(value).digest("hex");
 }
 
+// Tokens carry only an expiry and are not stored server-side, so a stolen
+// cookie stays valid until it expires. Rotating ADMIN_SESSION_SECRET is the way
+// to sign every admin out at once.
 /** Builds a signed "<expiryTimestamp>.<hmac>" session token. */
 export function createSessionToken(): string {
   const expires = Date.now() + SESSION_TTL_MS;

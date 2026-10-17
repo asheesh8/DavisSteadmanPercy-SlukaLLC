@@ -16,6 +16,10 @@ function readJson<T>(file: string): T {
   return JSON.parse(raw) as T;
 }
 
+// The "database" is the JSON files in data/, edited in place. That works with
+// `next dev` / `next start` on a normal server, but on Vercel the deployed
+// filesystem is read-only, so admin edits and contact submissions cannot be
+// saved there. Move these to a real database before relying on the admin.
 function writeJson<T>(file: string, data: T): void {
   const filePath = path.join(DATA_DIR, file);
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2) + "\n", "utf-8");
